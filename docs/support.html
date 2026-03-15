@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support - Cutout Magic / 抠图神器</title>
+  <style>
+    :root {
+      --bg: #f7efe6;
+      --surface: rgba(252, 246, 239, 0.96);
+      --text: #171417;
+      --muted: #5f5852;
+      --accent: #ff6d4f;
+      --accent-soft: #ffe2d8;
+      --border: #e7d6c7;
+      --dark: #1c191d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #fff8ef 0%, var(--bg) 52%);
+      color: var(--text);
+      font: 16px/1.7 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    }
+    .wrap { max-width: 1020px; margin: 0 auto; padding: 36px 20px 80px; }
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .brand { font-weight: 800; }
+    select {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+      border-radius: 14px;
+      padding: 10px 14px;
+      font: inherit;
+    }
+    .hero, .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: 0 18px 60px rgba(25, 18, 16, 0.08);
+    }
+    .hero { padding: 32px; margin-bottom: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+    .card { padding: 24px; }
+    .dark {
+      background: linear-gradient(135deg, #231f26, var(--dark));
+      color: white;
+    }
+    .dark p, .dark li, .dark a { color: rgba(255,255,255,0.84); }
+    .pill {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #a44530;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    h1, h2, h3 { margin: 0 0 12px; line-height: 1.15; }
+    h1 { font-size: 38px; }
+    h2 { font-size: 22px; }
+    p, li { color: var(--muted); }
+    ul { margin: 0; padding-left: 20px; }
+    a { color: #b64e37; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="toolbar">
+      <div class="brand"><a href="./index.html" style="color: inherit; text-decoration: none;">Cutout Magic / 抠图神器</a></div>
+      <select id="lang"></select>
+    </div>
+    <section class="hero">
+      <div class="pill" id="support-pill"></div>
+      <h1 id="title"></h1>
+      <p id="hero-body"></p>
+    </section>
+    <section class="grid">
+      <article class="card dark">
+        <h2 id="contact-title"></h2>
+        <p id="contact-body"></p>
+        <p id="response-time"></p>
+      </article>
+      <article class="card">
+        <h2 id="purchase-title"></h2>
+        <p id="purchase-body"></p>
+        <ul id="purchase-list"></ul>
+      </article>
+      <article class="card">
+        <h2 id="faq-title"></h2>
+        <ul id="faq-list"></ul>
+      </article>
+      <article class="card">
+        <h2 id="troubleshooting-title"></h2>
+        <ul id="troubleshooting-list"></ul>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const supportEmail = "luodan91918@gamil.com";
+    const t = {
+      en: {
+        lang: "English",
+        pill: "Support",
+        title: "Technical Support",
+        hero: "Official support page for Cutout Magic. This page covers purchases, restore flow, export issues, and contact details for the current App Store release.",
+        contactTitle: "Contact",
+        contactBody: `Support email: <a href="mailto:${supportEmail}">${supportEmail}</a>`,
+        responseTime: "Typical reply time: within 3 business days.",
+        purchaseTitle: "Purchase and Unlock",
+        purchaseBody: "Cutout Magic uses a free download plus one-time unlock model.",
+        purchaseList: [
+          "Free tier: import images, detect objects, preview edits, adjust frame and appearance.",
+          "Paid tier: save to Photos, share exported files, unlock high-resolution export, and use premium cleanup tools.",
+          "If a purchase is completed but access is still locked, open Settings and use Restore Purchases."
+        ],
+        faqTitle: "Common Questions",
+        faqs: [
+          "Why can’t I save or share? Those actions stay locked until the one-time unlock has been purchased or restored.",
+          "Does the app upload my photos? The app is designed around on-device processing for selected images.",
+          "What should I do if purchase status looks wrong? Make sure the same Apple ID is active, then use Restore Purchases."
+        ],
+        troubleshootingTitle: "Troubleshooting",
+        troubleshooting: [
+          "If object detection stalls, fully close the app and try the image again.",
+          "If the exported framing looks off, reopen the editor and drag the image inside the crop frame before exporting.",
+          "If saving fails, check Photo Library permission in iOS Settings.",
+          "If you need privacy details, review the Privacy Policy page."
+        ]
+      },
+      "zh-Hans": {
+        lang: "简体中文",
+        pill: "支持",
+        title: "技术支持",
+        hero: "这是抠图神器的官方支持页面，用于说明购买、恢复购买、导出问题和当前 App Store 版本的联系方式。",
+        contactTitle: "联系支持",
+        contactBody: `支持邮箱：<a href="mailto:${supportEmail}">${supportEmail}</a>`,
+        responseTime: "通常会在 3 个工作日内回复。",
+        purchaseTitle: "购买与解锁",
+        purchaseBody: "抠图神器采用“免费下载 + 一次买断解锁”的模式。",
+        purchaseList: [
+          "免费版：导入图片、识别物体、预览编辑、调整形状和外观。",
+          "付费版：保存到相册、分享文件、解锁高分辨率导出和高级清理工具。",
+          "如果已经购买但仍然锁定，请打开设置并使用“恢复购买”。"
+        ],
+        faqTitle: "常见问题",
+        faqs: [
+          "为什么不能保存或分享？这两个动作在买断前会保持锁定。",
+          "App 会上传照片吗？当前设计以本地处理为主，只处理用户选择的图片。",
+          "购买状态不对怎么办？请确认使用同一个 Apple ID，然后执行“恢复购买”。"
+        ],
+        troubleshootingTitle: "排查建议",
+        troubleshooting: [
+          "如果物体识别卡住，彻底关闭 App 后再重新尝试。",
+          "如果导出位置不对，请回到编辑页，在裁切框内拖动图片后再导出。",
+          "如果无法保存，请检查 iOS 设置里的照片权限。",
+          "如果需要查看隐私说明，请打开隐私页面。"
+        ]
+      },
+      "zh-Hant": {
+        lang: "繁體中文",
+        pill: "支援",
+        title: "技術支援",
+        hero: "這是摳圖神器的官方支援頁面，用於說明購買、恢復購買、導出問題和目前 App Store 版本的聯絡方式。",
+        contactTitle: "聯絡支援",
+        contactBody: `支援信箱：<a href="mailto:${supportEmail}">${supportEmail}</a>`,
+        responseTime: "通常會在 3 個工作日內回覆。",
+        purchaseTitle: "購買與解鎖",
+        purchaseBody: "摳圖神器採用「免費下載 + 一次買斷解鎖」模式。",
+        purchaseList: [
+          "免費版：匯入圖片、識別物體、預覽編輯、調整形狀和外觀。",
+          "付費版：保存到相簿、分享檔案、解鎖高解析度導出和高級清理工具。",
+          "如果已購買但仍然顯示鎖定，請打開設定並使用「恢復購買」。"
+        ],
+        faqTitle: "常見問題",
+        faqs: [
+          "為什麼不能保存或分享？這兩個動作在買斷前會保持鎖定。",
+          "App 會上傳照片嗎？目前設計以本地處理為主，只處理用戶選擇的圖片。",
+          "購買狀態不正確怎麼辦？請確認使用同一個 Apple ID，然後執行「恢復購買」。"
+        ],
+        troubleshootingTitle: "排查建議",
+        troubleshooting: [
+          "如果物體識別卡住，請完全關閉 App 後再重新嘗試。",
+          "如果導出位置不正確，請回到編輯頁，在裁切框內拖動圖片後再導出。",
+          "如果無法保存，請檢查 iOS 設定中的照片權限。",
+          "如果需要隱私說明，請打開隱私頁面。"
+        ]
+      },
+      ja: {
+        lang: "日本語",
+        pill: "サポート",
+        title: "技術サポート",
+        hero: "Cutout Magic の公式サポートページです。購入、復元、書き出し時の問題、現在の App Store 版の連絡先を案内します。",
+        contactTitle: "お問い合わせ",
+        contactBody: `サポートメール: <a href="mailto:${supportEmail}">${supportEmail}</a>`,
+        responseTime: "通常は 3 営業日以内に返信します。",
+        purchaseTitle: "購入とアンロック",
+        purchaseBody: "Cutout Magic は「無料ダウンロード + 買い切りアンロック」モデルです。",
+        purchaseList: [
+          "無料版: 画像の読み込み、対象認識、編集プレビュー、フレームや見た目の調整。",
+          "有料版: 写真への保存、共有、高解像度書き出し、プレミアム補正ツールの解放。",
+          "購入済みなのにロックが外れない場合は、設定画面で「購入を復元」を実行してください。"
+        ],
+        faqTitle: "よくある質問",
+        faqs: [
+          "なぜ保存や共有ができませんか？ これらの機能は買い切りアンロック前はロックされたままです。",
+          "写真はアップロードされますか？ 本アプリは選択した画像を端末内で処理する設計です。",
+          "購入状態が正しくない場合は？ 同じ Apple ID を確認し、購入を復元してください。"
+        ],
+        troubleshootingTitle: "トラブルシューティング",
+        troubleshooting: [
+          "対象認識が止まる場合は、アプリを完全終了して再試行してください。",
+          "書き出し位置がずれる場合は、編集画面でクロップ枠の中をドラッグしてから再度書き出してください。",
+          "保存できない場合は、iOS 設定で写真アクセス権限を確認してください。",
+          "プライバシーの説明が必要な場合は、プライバシーポリシーをご確認ください。"
+        ]
+      },
+      ko: {
+        lang: "한국어",
+        pill: "지원",
+        title: "기술 지원",
+        hero: "Cutout Magic의 공식 지원 페이지입니다. 구매, 구매 복원, 내보내기 문제, 현재 App Store 버전의 연락처 정보를 안내합니다.",
+        contactTitle: "문의하기",
+        contactBody: `지원 이메일: <a href="mailto:${supportEmail}">${supportEmail}</a>`,
+        responseTime: "보통 3영업일 이내에 답변합니다.",
+        purchaseTitle: "구매 및 잠금 해제",
+        purchaseBody: "Cutout Magic은 무료 다운로드 후 한 번 결제로 해제하는 방식입니다.",
+        purchaseList: [
+          "무료 버전: 이미지 가져오기, 객체 인식, 편집 미리보기, 프레임과 외형 조정.",
+          "유료 버전: 사진에 저장, 파일 공유, 고해상도 내보내기, 프리미엄 정리 도구 해제.",
+          "결제가 완료되었는데도 잠겨 있다면 설정에서 구매 복원을 실행하세요."
+        ],
+        faqTitle: "자주 묻는 질문",
+        faqs: [
+          "왜 저장이나 공유가 안 되나요? 이 기능들은 한 번 결제 전까지 잠겨 있습니다.",
+          "사진이 업로드되나요? 이 앱은 선택한 이미지를 기기 내에서 처리하도록 설계되었습니다.",
+          "구매 상태가 이상하면 어떻게 하나요? 같은 Apple ID를 확인한 뒤 구매 복원을 실행하세요."
+        ],
+        troubleshootingTitle: "문제 해결",
+        troubleshooting: [
+          "객체 인식이 멈추면 앱을 완전히 종료한 뒤 다시 시도하세요.",
+          "내보내기 위치가 어긋나면 편집 화면에서 크롭 프레임 안쪽만 드래그한 뒤 다시 내보내세요.",
+          "저장에 실패하면 iOS 설정의 사진 접근 권한을 확인하세요.",
+          "개인정보 안내가 필요하면 개인정보 페이지를 확인하세요."
+        ]
+      },
+      es: {
+        lang: "Español",
+        pill: "Soporte",
+        title: "Soporte Técnico",
+        hero: "Página oficial de soporte de Cutout Magic. Aquí se cubren compras, restauración, problemas de exportación y los datos de contacto de la versión actual en App Store.",
+        contactTitle: "Contacto",
+        contactBody: `Correo de soporte: <a href="mailto:${supportEmail}">${supportEmail}</a>`,
+        responseTime: "Tiempo de respuesta habitual: dentro de 3 días laborables.",
+        purchaseTitle: "Compra y desbloqueo",
+        purchaseBody: "Cutout Magic utiliza el modelo de descarga gratuita con desbloqueo único.",
+        purchaseList: [
+          "Versión gratuita: importar imágenes, reconocer objetos, previsualizar la edición y ajustar el marco y la apariencia.",
+          "Versión de pago: guardar en Fotos, compartir archivos, desbloquear exportación en alta resolución y herramientas premium de limpieza.",
+          "Si ya has comprado pero sigue bloqueado, abre Ajustes y usa Restaurar compras."
+        ],
+        faqTitle: "Preguntas frecuentes",
+        faqs: [
+          "¿Por qué no puedo guardar ni compartir? Estas acciones permanecen bloqueadas hasta comprar o restaurar el desbloqueo único.",
+          "¿La app sube mis fotos? Está diseñada para procesar localmente las imágenes seleccionadas.",
+          "¿Qué hago si el estado de compra es incorrecto? Verifica que usas el mismo Apple ID y luego restaura las compras."
+        ],
+        troubleshootingTitle: "Solución de problemas",
+        troubleshooting: [
+          "Si la detección se queda bloqueada, cierra completamente la app y vuelve a intentarlo.",
+          "Si la posición exportada no es correcta, vuelve al editor y arrastra la imagen dentro del marco antes de exportar.",
+          "Si no puedes guardar, revisa el permiso de Fotos en los ajustes de iOS.",
+          "Si necesitas información de privacidad, consulta la página de privacidad."
+        ]
+      }
+    };
+
+    const langSelect = document.getElementById("lang");
+    const supported = Object.keys(t);
+    const browserLang = navigator.language.startsWith("zh-CN") ? "zh-Hans"
+      : navigator.language.startsWith("zh-TW") || navigator.language.startsWith("zh-HK") ? "zh-Hant"
+      : supported.find((key) => navigator.language.startsWith(key)) || "en";
+
+    supported.forEach((key) => {
+      const option = document.createElement("option");
+      option.value = key;
+      option.textContent = t[key].lang;
+      langSelect.appendChild(option);
+    });
+
+    function render(lang) {
+      const x = t[lang] || t.en;
+      document.documentElement.lang = lang;
+      document.title = `${x.title} - Cutout Magic`;
+      document.getElementById("support-pill").textContent = x.pill;
+      document.getElementById("title").textContent = x.title;
+      document.getElementById("hero-body").textContent = x.hero;
+      document.getElementById("contact-title").textContent = x.contactTitle;
+      document.getElementById("contact-body").innerHTML = x.contactBody;
+      document.getElementById("response-time").textContent = x.responseTime;
+      document.getElementById("purchase-title").textContent = x.purchaseTitle;
+      document.getElementById("purchase-body").textContent = x.purchaseBody;
+      document.getElementById("faq-title").textContent = x.faqTitle;
+      document.getElementById("troubleshooting-title").textContent = x.troubleshootingTitle;
+
+      const purchaseList = document.getElementById("purchase-list");
+      purchaseList.innerHTML = "";
+      x.purchaseList.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        purchaseList.appendChild(li);
+      });
+
+      const faqList = document.getElementById("faq-list");
+      faqList.innerHTML = "";
+      x.faqs.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        faqList.appendChild(li);
+      });
+
+      const troubleshootingList = document.getElementById("troubleshooting-list");
+      troubleshootingList.innerHTML = "";
+      x.troubleshooting.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        troubleshootingList.appendChild(li);
+      });
+    }
+
+    langSelect.value = browserLang;
+    render(browserLang);
+    langSelect.addEventListener("change", (event) => render(event.target.value));
+  </script>
+</body>
+</html>

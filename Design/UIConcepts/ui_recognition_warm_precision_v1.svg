@@ -1,0 +1,40 @@
+<svg width="720" height="1480" viewBox="0 0 720 1480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="1480" rx="56" fill="#FFF5EB"/>
+  <rect x="42" y="28" width="636" height="1424" rx="54" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="2"/>
+  <text x="86" y="108" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Recognize</text>
+  <text x="564" y="108" fill="#E6573D" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Skip</text>
+
+  <rect x="74" y="148" width="572" height="176" rx="34" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+  <rect x="108" y="176" width="90" height="34" rx="17" fill="#FFF0E2"/>
+  <rect x="210" y="176" width="124" height="34" rx="17" fill="#FFD8C8"/>
+  <rect x="346" y="176" width="94" height="34" rx="17" fill="#FFD8C8"/>
+  <text x="108" y="254" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="38" font-weight="700">Choose the object to isolate.</text>
+
+  <rect x="74" y="352" width="572" height="552" rx="34" fill="#0B0C0E"/>
+  <circle cx="520" cy="430" r="116" fill="#FF8F69" fill-opacity="0.20"/>
+  <text x="108" y="406" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Recognition Stage</text>
+  <rect x="512" y="374" width="100" height="36" rx="18" fill="#FF8F69"/>
+  <text x="538" y="398" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700">3 found</text>
+  <rect x="112" y="444" width="496" height="296" rx="28" fill="#15171C"/>
+  <path d="M228 504C284 450 346 436 418 456V716C314 716 242 658 218 582L208 548C202 526 206 514 228 504Z" fill="#FFF4EA"/>
+  <path d="M418 456C472 478 506 532 514 590V704C488 724 454 738 410 738V598C410 534 412 494 418 456Z" fill="#FF8F69"/>
+  <rect x="180" y="484" width="274" height="290" rx="28" stroke="#FF8F69" stroke-width="5"/>
+  <rect x="126" y="592" width="116" height="146" rx="20" stroke="#FFD8C8" stroke-width="3" stroke-dasharray="10 10"/>
+  <rect x="468" y="532" width="88" height="108" rx="18" stroke="#FFFFFF" stroke-opacity="0.72" stroke-width="3" stroke-dasharray="10 10"/>
+  <rect x="190" y="462" width="142" height="34" rx="17" fill="#FFF0E2"/>
+  <text x="214" y="485" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Primary Subject</text>
+  <rect x="136" y="566" width="104" height="30" rx="15" fill="#101319"/>
+  <text x="162" y="586" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Accessory</text>
+
+  <rect x="74" y="930" width="572" height="312" rx="34" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+  <text x="108" y="986" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700">Detected Objects</text>
+  <rect x="108" y="1018" width="504" height="70" rx="24" fill="#FFE7DC" stroke="#FF8F69" stroke-width="2"/>
+  <text x="134" y="1060" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Primary Subject</text>
+  <text x="504" y="1060" fill="#E6573D" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700">96%</text>
+  <rect x="108" y="1102" width="504" height="58" rx="22" fill="#FFF5EB"/>
+  <text x="134" y="1138" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700">Accessory</text>
+  <text x="520" y="1138" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700">78%</text>
+  <rect x="108" y="1172" width="504" height="58" rx="22" fill="#FFF5EB"/>
+  <text x="134" y="1208" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700">Background Detail</text>
+  <text x="502" y="1208" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700">63%</text>
+</svg>

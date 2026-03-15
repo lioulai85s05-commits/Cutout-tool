@@ -1,0 +1,41 @@
+<svg width="720" height="1480" viewBox="0 0 720 1480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="1480" rx="56" fill="#FFF5EB"/>
+  <rect x="42" y="28" width="636" height="1424" rx="54" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="2"/>
+  <text x="86" y="108" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Cutout</text>
+  <circle cx="614" cy="100" r="22" fill="#FFF0E2"/>
+  <path d="M614 88V112" stroke="#171412" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M602 100H626" stroke="#171412" stroke-width="2.5" stroke-linecap="round"/>
+
+  <rect x="74" y="148" width="572" height="236" rx="34" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+  <text x="108" y="214" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="700">Upload once.</text>
+  <text x="108" y="266" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="700">Choose clearly.</text>
+  <text x="108" y="318" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="700">Cut out fast.</text>
+  <text x="108" y="350" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="22">Warm shell outside. Precision inside.</text>
+  <circle cx="554" cy="278" r="52" stroke="#E3D0C0" stroke-width="16"/>
+  <circle cx="554" cy="278" r="28" fill="#171412"/>
+  <circle cx="592" cy="312" r="18" fill="#FF8F69"/>
+
+  <rect x="74" y="412" width="572" height="286" rx="34" fill="#0B0C0E"/>
+  <circle cx="534" cy="474" r="96" fill="#FF8F69" fill-opacity="0.22"/>
+  <text x="108" y="486" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700">Recognition-first workflow</text>
+  <text x="108" y="528" fill="#F5D8CD" font-family="Helvetica, Arial, sans-serif" font-size="24">Scan the image first, then let the user</text>
+  <text x="108" y="562" fill="#F5D8CD" font-family="Helvetica, Arial, sans-serif" font-size="24">confirm the target before extraction.</text>
+  <rect x="108" y="606" width="504" height="76" rx="28" fill="#FF8F69"/>
+  <text x="266" y="655" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Choose Photo</text>
+
+  <rect x="74" y="726" width="572" height="198" rx="34" fill="#FFF0E2"/>
+  <text x="108" y="790" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700">Flow</text>
+  <rect x="108" y="816" width="92" height="34" rx="17" fill="#FFD8C8"/>
+  <rect x="212" y="816" width="120" height="34" rx="17" fill="#FFD8C8"/>
+  <rect x="344" y="816" width="102" height="34" rx="17" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="2"/>
+  <rect x="458" y="816" width="100" height="34" rx="17" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="2"/>
+  <text x="108" y="886" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="22">Recent projects appear below after the</text>
+  <text x="108" y="918" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="22">first recognition and cutout run.</text>
+
+  <rect x="74" y="952" width="572" height="208" rx="34" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+  <text x="108" y="1010" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700">Permanent Unlock</text>
+  <text x="108" y="1054" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="24">No subscription tone. One purchase to</text>
+  <text x="108" y="1086" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="24">unlock premium export and precision.</text>
+  <rect x="108" y="1114" width="504" height="62" rx="24" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="2"/>
+  <text x="242" y="1154" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700">Preview Buy Once</text>
+</svg>

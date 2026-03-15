@@ -1,0 +1,46 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgD" x1="126" y1="98" x2="872" y2="930" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#122C9D"/>
+      <stop offset="0.45" stop-color="#07174F"/>
+      <stop offset="1" stop-color="#030816"/>
+    </linearGradient>
+    <linearGradient id="ringD" x1="298" y1="258" x2="768" y2="740" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#63A7FF"/>
+      <stop offset="0.5" stop-color="#2C78FF"/>
+      <stop offset="1" stop-color="#26C1FF"/>
+    </linearGradient>
+    <linearGradient id="coreD" x1="382" y1="324" x2="624" y2="662" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DCE8FF"/>
+    </linearGradient>
+    <linearGradient id="chipD" x1="700" y1="630" x2="812" y2="748" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#53C9FF"/>
+      <stop offset="1" stop-color="#2B79FF"/>
+    </linearGradient>
+    <filter id="glowD" x="202" y="166" width="642" height="650" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="26" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.172549 0 0 0 0 0.47451 0 0 0 0 1 0 0 0 0.26 0"/>
+    </filter>
+    <filter id="shadowD" x="168" y="150" width="692" height="710" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#061542" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+  <rect x="80" y="80" width="864" height="864" rx="196" fill="url(#bgD)"/>
+  <path d="M144 192C210 126.98 316 94 442 94H886" stroke="#66A7FF" stroke-opacity="0.12" stroke-width="3"/>
+  <path d="M180 828C282 892 422 920 598 914H876" stroke="#3DC6FF" stroke-opacity="0.12" stroke-width="3"/>
+  <g filter="url(#glowD)">
+    <circle cx="512" cy="512" r="220" stroke="#3A8DFF" stroke-width="18"/>
+  </g>
+  <g filter="url(#shadowD)">
+    <circle cx="512" cy="512" r="212" stroke="url(#ringD)" stroke-width="28"/>
+    <path d="M412 365C412 335.177 436.177 311 466 311H560L628 379V527C628 556.823 603.823 581 574 581H466C436.177 581 412 556.823 412 527V365Z" fill="url(#coreD)"/>
+    <path d="M560 311L628 379H580C568.954 379 560 370.046 560 359V311Z" fill="#7AAEFF"/>
+    <path d="M392 650C392 621.281 415.281 598 444 598H572C600.719 598 624 621.281 624 650V669C624 697.719 600.719 721 572 721H444C415.281 721 392 697.719 392 669V650Z" fill="#E8F0FF"/>
+    <path d="M698 648C698 620.386 720.386 598 748 598C775.614 598 798 620.386 798 648C798 675.614 775.614 698 748 698C720.386 698 698 675.614 698 648Z" fill="url(#chipD)"/>
+    <path d="M728 649L742 663L769 636" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M302 512H338" stroke="#E1EDFF" stroke-width="16" stroke-linecap="round"/>
+  <path d="M685 512H721" stroke="#E1EDFF" stroke-width="16" stroke-linecap="round"/>
+  <path d="M512 302V338" stroke="#E1EDFF" stroke-width="16" stroke-linecap="round"/>
+</svg>

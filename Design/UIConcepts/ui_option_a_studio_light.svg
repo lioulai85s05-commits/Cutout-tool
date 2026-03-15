@@ -1,0 +1,40 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="48" fill="#F6F2EB"/>
+  <text x="80" y="120" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="54" font-weight="700">UI Option A · Studio Light</text>
+  <text x="80" y="168" fill="#5B5149" font-family="Helvetica, Arial, sans-serif" font-size="24">Warm shell, dark recognition canvas, premium but friendly.</text>
+
+  <rect x="84" y="230" width="420" height="680" rx="54" fill="#FFF9F2" stroke="#D9CEC2" stroke-width="4"/>
+  <rect x="114" y="284" width="360" height="220" rx="34" fill="#FFF4E8"/>
+  <text x="140" y="340" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="700">Upload</text>
+  <text x="140" y="386" fill="#5B5149" font-family="Helvetica, Arial, sans-serif" font-size="22">Pick one photo and start</text>
+  <text x="140" y="416" fill="#5B5149" font-family="Helvetica, Arial, sans-serif" font-size="22">object recognition instantly.</text>
+  <rect x="140" y="444" width="180" height="52" rx="26" fill="#FF7A59"/>
+  <text x="178" y="478" fill="white" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Select Photo</text>
+  <rect x="114" y="536" width="360" height="108" rx="28" fill="#FFF0E5"/>
+  <rect x="114" y="664" width="170" height="170" rx="28" fill="#121215"/>
+  <rect x="304" y="664" width="170" height="170" rx="28" fill="#121215"/>
+  <circle cx="204" cy="748" r="48" fill="#FFF4EA"/>
+  <rect x="334" y="700" width="110" height="96" rx="28" fill="#FFF4EA"/>
+
+  <rect x="592" y="230" width="420" height="680" rx="54" fill="#FFF9F2" stroke="#D9CEC2" stroke-width="4"/>
+  <rect x="622" y="284" width="360" height="420" rx="34" fill="#0C0C0D"/>
+  <rect x="622" y="724" width="360" height="156" rx="30" fill="#FFF4E8"/>
+  <ellipse cx="802" cy="492" rx="126" ry="178" fill="#FDEBDE"/>
+  <path d="M676 374C718 334 766 312 814 312C870 312 920 340 955 394" stroke="#FF7A59" stroke-width="9" stroke-linecap="round"/>
+  <path d="M710 700C720 648 758 620 812 620C874 620 906 660 914 700" stroke="#FF7A59" stroke-width="10" stroke-linecap="round"/>
+  <path d="M662 372C718 408 718 584 650 626" stroke="#4ED5FF" stroke-width="7" stroke-linecap="round"/>
+  <path d="M960 422C922 418 894 436 882 470" stroke="#B2E95B" stroke-width="7" stroke-linecap="round"/>
+  <text x="656" y="782" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700">Tap an outlined object</text>
+  <text x="656" y="818" fill="#5B5149" font-family="Helvetica, Arial, sans-serif" font-size="22">Different colors mark each detected instance.</text>
+
+  <rect x="1100" y="230" width="420" height="680" rx="54" fill="#FFF9F2" stroke="#D9CEC2" stroke-width="4"/>
+  <rect x="1130" y="284" width="360" height="420" rx="34" fill="#0C0C0D"/>
+  <circle cx="1310" cy="494" r="156" fill="#FFF4EA"/>
+  <path d="M1276 382C1312 366 1368 390 1380 446" stroke="#FF7A59" stroke-width="10" stroke-linecap="round"/>
+  <rect x="1130" y="732" width="360" height="64" rx="28" fill="#FFF1E7"/>
+  <rect x="1130" y="812" width="170" height="44" rx="22" fill="#FF7A59"/>
+  <rect x="1320" y="812" width="170" height="44" rx="22" fill="#FFF1E7" stroke="#D9CEC2" stroke-width="3"/>
+  <text x="1172" y="772" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="24">Background · Shape · Format</text>
+  <text x="1188" y="841" fill="white" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700">Save PNG</text>
+  <text x="1372" y="841" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700">JPG</text>
+</svg>

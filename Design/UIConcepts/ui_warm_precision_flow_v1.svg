@@ -1,0 +1,202 @@
+<svg width="1800" height="1560" viewBox="0 0 1800 1560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pageBg" x1="112" y1="94" x2="1690" y2="1488" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7F0"/>
+      <stop offset="0.55" stop-color="#FFF2E7"/>
+      <stop offset="1" stop-color="#F3E1D3"/>
+    </linearGradient>
+    <linearGradient id="darkPanel" x1="0" y1="0" x2="280" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#23262C"/>
+      <stop offset="1" stop-color="#0B0C0E"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="220" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8F69"/>
+      <stop offset="1" stop-color="#E6573D"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-40" y="-30" width="460" height="910" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#7E6354" flood-opacity="0.16"/>
+    </filter>
+    <filter id="softGlow" x="-120" y="-120" width="440" height="440" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="45"/>
+    </filter>
+  </defs>
+
+  <rect width="1800" height="1560" rx="56" fill="url(#pageBg)"/>
+
+  <text x="96" y="110" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="54" font-weight="700">Warm Precision UI · Flow Preview</text>
+  <text x="96" y="158" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="24">Upload → Recognize → Select → Extract → Save. Object Ring color logic applied across the full app shell.</text>
+
+  <!-- Home -->
+  <g transform="translate(90 230)">
+    <g filter="url(#cardShadow)">
+      <rect width="360" height="780" rx="48" fill="#FFF9F1"/>
+    </g>
+    <rect x="20" y="20" width="320" height="740" rx="38" fill="#FFF5EB" stroke="#E3D0C0" stroke-width="2"/>
+    <text x="42" y="78" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700">Object Cutout</text>
+    <circle cx="305" cy="72" r="16" fill="#FFF0E2"/>
+    <path d="M305 64L305 80" stroke="#171412" stroke-width="2" stroke-linecap="round"/>
+    <path d="M297 72L313 72" stroke="#171412" stroke-width="2" stroke-linecap="round"/>
+
+    <rect x="40" y="106" width="280" height="172" rx="28" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+    <text x="58" y="146" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700">Upload once.</text>
+    <text x="58" y="182" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700">Choose clearly.</text>
+    <text x="58" y="216" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700">Cut out fast.</text>
+    <text x="58" y="248" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="16">Warm shell outside. Precision inside.</text>
+    <circle cx="278" cy="206" r="34" stroke="#E3D0C0" stroke-width="12"/>
+    <circle cx="278" cy="206" r="18" fill="#171412"/>
+    <circle cx="302" cy="226" r="12" fill="#FF8F69"/>
+
+    <rect x="40" y="300" width="280" height="190" rx="28" fill="url(#darkPanel)"/>
+    <g filter="url(#softGlow)">
+      <circle cx="266" cy="364" r="68" fill="#FF8F69" fill-opacity="0.24"/>
+    </g>
+    <text x="58" y="342" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700">Recognition-first workflow</text>
+    <text x="58" y="374" fill="#F5D8CD" font-family="Helvetica, Arial, sans-serif" font-size="16">Scan the photo first, then let the</text>
+    <text x="58" y="396" fill="#F5D8CD" font-family="Helvetica, Arial, sans-serif" font-size="16">user confirm the object to isolate.</text>
+    <rect x="58" y="424" width="244" height="54" rx="20" fill="url(#accentGrad)"/>
+    <text x="122" y="458" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="700">Choose Photo</text>
+
+    <rect x="40" y="514" width="280" height="110" rx="26" fill="#FFF0E2"/>
+    <text x="58" y="552" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">Process</text>
+    <rect x="58" y="570" width="56" height="28" rx="14" fill="#FFD8C8"/>
+    <rect x="122" y="570" width="74" height="28" rx="14" fill="#FFD8C8"/>
+    <rect x="204" y="570" width="62" height="28" rx="14" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="1.5"/>
+    <rect x="58" y="640" width="82" height="88" rx="18" fill="#FFF9F1"/>
+    <rect x="150" y="640" width="82" height="88" rx="18" fill="#FFF9F1"/>
+    <rect x="242" y="640" width="82" height="88" rx="18" fill="#FFF9F1"/>
+  </g>
+
+  <!-- Recognition -->
+  <g transform="translate(515 230)">
+    <g filter="url(#cardShadow)">
+      <rect width="360" height="780" rx="48" fill="#FFF9F1"/>
+    </g>
+    <rect x="20" y="20" width="320" height="740" rx="38" fill="#FFF5EB" stroke="#E3D0C0" stroke-width="2"/>
+    <text x="42" y="78" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700">Recognize</text>
+    <text x="250" y="78" fill="#E6573D" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Skip</text>
+
+    <rect x="40" y="106" width="280" height="108" rx="28" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+    <rect x="58" y="126" width="58" height="26" rx="13" fill="#FFF0E2"/>
+    <rect x="122" y="126" width="72" height="26" rx="13" fill="#FFD8C8"/>
+    <rect x="200" y="126" width="56" height="26" rx="13" fill="#FFD8C8"/>
+    <text x="58" y="180" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Choose the object to isolate.</text>
+
+    <rect x="40" y="236" width="280" height="332" rx="28" fill="url(#darkPanel)"/>
+    <g filter="url(#softGlow)">
+      <circle cx="260" cy="308" r="72" fill="#FF8F69" fill-opacity="0.22"/>
+    </g>
+    <rect x="72" y="272" width="216" height="260" rx="24" fill="#15171C"/>
+    <path d="M120 328C156 294 198 282 242 296V508C180 506 132 458 118 402L114 384C108 362 110 342 120 328Z" fill="#FFF4EA"/>
+    <path d="M242 296C278 314 300 354 304 396V504C286 522 260 532 228 532V424C228 376 232 340 242 296Z" fill="#FF8F69"/>
+    <rect x="92" y="292" width="176" height="220" rx="22" stroke="#FF8F69" stroke-width="4"/>
+    <text x="68" y="262" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700">Recognition Stage</text>
+    <rect x="244" y="252" width="60" height="26" rx="13" fill="#FF8F69"/>
+    <text x="258" y="269" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700">3 found</text>
+
+    <rect x="40" y="590" width="280" height="138" rx="28" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+    <rect x="58" y="614" width="244" height="42" rx="18" fill="#FFE7DC" stroke="#FF8F69" stroke-width="2"/>
+    <circle cx="84" cy="635" r="10" fill="#FF8F69"/>
+    <text x="104" y="640" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Primary Subject</text>
+    <text x="238" y="640" fill="#E6573D" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700">96%</text>
+    <rect x="58" y="664" width="244" height="42" rx="18" fill="#FFF5EB"/>
+    <circle cx="84" cy="685" r="10" fill="#E3D0C0"/>
+    <text x="104" y="690" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Secondary Object</text>
+    <text x="236" y="690" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700">78%</text>
+  </g>
+
+  <!-- Editor -->
+  <g transform="translate(940 230)">
+    <g filter="url(#cardShadow)">
+      <rect width="360" height="780" rx="48" fill="#FFF9F1"/>
+    </g>
+    <rect x="20" y="20" width="320" height="740" rx="38" fill="#FFF5EB" stroke="#E3D0C0" stroke-width="2"/>
+    <text x="42" y="78" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700">Editor</text>
+    <text x="216" y="78" fill="#E6573D" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Buy Once</text>
+
+    <rect x="40" y="106" width="280" height="116" rx="28" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+    <text x="58" y="144" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Cutout Mar 14, 16:30</text>
+    <text x="58" y="174" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="16">Recognition locked the target.</text>
+    <rect x="222" y="132" width="80" height="54" rx="18" fill="#FFF0E2"/>
+    <text x="238" y="154" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700">SELECTED</text>
+    <text x="238" y="173" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Primary</text>
+
+    <rect x="40" y="244" width="280" height="320" rx="28" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+    <rect x="58" y="290" width="244" height="240" rx="24" fill="url(#darkPanel)"/>
+    <circle cx="180" cy="410" r="78" fill="#FFF4EA"/>
+    <path d="M150 374C166 356 198 352 220 380" stroke="#FF8F69" stroke-width="8" stroke-linecap="round"/>
+    <rect x="206" y="316" width="78" height="28" rx="14" fill="#191C22"/>
+    <text x="220" y="335" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700">Current</text>
+
+    <rect x="40" y="586" width="280" height="58" rx="22" fill="#FFF0E2"/>
+    <rect x="52" y="597" width="54" height="36" rx="16" fill="#FF8F69"/>
+    <rect x="114" y="597" width="54" height="36" rx="16" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="1.5"/>
+    <rect x="176" y="597" width="54" height="36" rx="16" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="1.5"/>
+    <rect x="238" y="597" width="54" height="36" rx="16" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="1.5"/>
+
+    <rect x="40" y="662" width="280" height="84" rx="26" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+    <text x="58" y="698" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">Shape · Color · Background · Clarity</text>
+    <rect x="58" y="710" width="102" height="22" rx="11" fill="#FFD8C8"/>
+    <rect x="170" y="710" width="78" height="22" rx="11" fill="#FFF0E2"/>
+  </g>
+
+  <!-- Export -->
+  <g transform="translate(1365 230)">
+    <g filter="url(#cardShadow)">
+      <rect width="360" height="780" rx="48" fill="#FFF9F1"/>
+    </g>
+    <rect x="20" y="20" width="320" height="740" rx="38" fill="#FFF5EB" stroke="#E3D0C0" stroke-width="2"/>
+    <text x="42" y="78" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700">Export</text>
+    <text x="280" y="78" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Done</text>
+
+    <rect x="40" y="106" width="280" height="156" rx="28" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+    <rect x="58" y="130" width="94" height="94" rx="18" fill="url(#darkPanel)"/>
+    <circle cx="105" cy="176" r="34" fill="#FFF4EA"/>
+    <text x="170" y="154" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700">Output Summary</text>
+    <text x="170" y="180" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="14">Object  Primary</text>
+    <text x="170" y="204" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="14">Shape  Circle</text>
+    <text x="170" y="228" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="14">Color  Original</text>
+
+    <rect x="40" y="282" width="280" height="112" rx="28" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+    <text x="58" y="320" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">Format First</text>
+    <rect x="58" y="342" width="80" height="34" rx="16" fill="#FF8F69"/>
+    <rect x="146" y="342" width="80" height="34" rx="16" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="1.5"/>
+    <text x="88" y="364" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700">PNG</text>
+    <text x="176" y="364" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700">JPG</text>
+
+    <rect x="40" y="414" width="280" height="146" rx="28" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+    <text x="58" y="452" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">Resolution</text>
+    <rect x="58" y="472" width="244" height="34" rx="16" fill="#FFF0E2"/>
+    <rect x="58" y="514" width="244" height="34" rx="16" fill="#FFE7DC" stroke="#FF8F69" stroke-width="1.5"/>
+    <text x="76" y="494" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700">Standard</text>
+    <text x="76" y="536" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700">High Resolution</text>
+
+    <rect x="40" y="584" width="280" height="152" rx="28" fill="#FFFDF9" stroke="#E3D0C0" stroke-width="2"/>
+    <rect x="58" y="610" width="244" height="54" rx="20" fill="url(#accentGrad)"/>
+    <rect x="58" y="676" width="244" height="42" rx="20" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="1.5"/>
+    <text x="128" y="645" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">Save to Photos</text>
+    <text x="142" y="703" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700">Share Result</text>
+  </g>
+
+  <text x="96" y="1084" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700">Color Logic</text>
+  <text x="96" y="1122" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="20">The icon and UI now use the same system: warm shell, dark stage, coral action, soft border.</text>
+
+  <rect x="96" y="1160" width="240" height="112" rx="26" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="2"/>
+  <text x="122" y="1202" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">Shell Background</text>
+  <rect x="122" y="1220" width="62" height="28" rx="14" fill="#FFF5EB"/>
+  <text x="196" y="1240" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="16">#FFF5EB</text>
+
+  <rect x="366" y="1160" width="240" height="112" rx="26" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="2"/>
+  <text x="392" y="1202" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">Canvas Dark</text>
+  <rect x="392" y="1220" width="62" height="28" rx="14" fill="#0B0C0E"/>
+  <text x="466" y="1240" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="16">#0B0C0E</text>
+
+  <rect x="636" y="1160" width="240" height="112" rx="26" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="2"/>
+  <text x="662" y="1202" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">Accent</text>
+  <rect x="662" y="1220" width="62" height="28" rx="14" fill="#FF8F69"/>
+  <text x="736" y="1240" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="16">#FF8F69</text>
+
+  <rect x="906" y="1160" width="240" height="112" rx="26" fill="#FFF9F1" stroke="#E3D0C0" stroke-width="2"/>
+  <text x="932" y="1202" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">Border Soft</text>
+  <rect x="932" y="1220" width="62" height="28" rx="14" fill="#E3D0C0"/>
+  <text x="1006" y="1240" fill="#6D625A" font-family="Helvetica, Arial, sans-serif" font-size="16">#E3D0C0</text>
+</svg>

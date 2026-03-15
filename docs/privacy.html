@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy - Cutout Magic / 抠图神器</title>
+  <style>
+    :root {
+      --bg: #f7efe6;
+      --surface: rgba(252, 246, 239, 0.96);
+      --text: #171417;
+      --muted: #5f5852;
+      --accent: #ff6d4f;
+      --accent-soft: #ffe2d8;
+      --border: #e7d6c7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #fff8ef 0%, var(--bg) 52%);
+      color: var(--text);
+      font: 16px/1.7 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 36px 20px 80px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 18px 60px rgba(25, 18, 16, 0.08);
+    }
+    h1, h2 { margin: 0 0 12px; line-height: 1.15; }
+    h1 { font-size: 38px; }
+    h2 { margin-top: 28px; font-size: 22px; }
+    p, li { color: var(--muted); }
+    a { color: #b64e37; }
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .brand { font-weight: 800; }
+    .pill {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #a44530;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    select {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+      border-radius: 14px;
+      padding: 10px 14px;
+      font: inherit;
+    }
+    .meta {
+      color: #8c8178;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="toolbar">
+      <div class="brand"><a href="./index.html" style="color: inherit; text-decoration: none;">Cutout Magic / 抠图神器</a></div>
+      <select id="lang"></select>
+    </div>
+    <section class="card">
+      <div class="pill" id="policy-pill"></div>
+      <h1 id="title"></h1>
+      <p class="meta" id="effective-date"></p>
+      <p id="intro"></p>
+
+      <div id="sections"></div>
+
+      <h2 id="contact-title"></h2>
+      <p id="contact-body"></p>
+    </section>
+  </main>
+
+  <script>
+    const supportEmail = "luodan91918@gamil.com";
+    const translations = {
+      en: {
+        lang: "English",
+        pill: "Privacy Policy",
+        title: "Privacy Policy",
+        effectiveDate: "Effective date: March 15, 2026",
+        intro: "This Privacy Policy applies to Cutout Magic (also distributed under the Chinese name 抠图神器), developed by Yahaha Tech. Copyright © 2026 Yahaha Tech, Rodan.",
+        sections: [
+          ["1. Overview", "Cutout Magic is an on-device cutout tool. The app lets people select an image, detect foreground objects locally, preview edits, and unlock export features with a one-time purchase."],
+          ["2. Data We Process", "The app processes only the images the user explicitly selects. If the user chooses to export, the app locally renders an output file for saving or sharing. Purchase and restore information is handled through Apple StoreKit."],
+          ["3. Data We Do Not Collect", "We do not create user accounts for this app. We do not upload selected photos to our own servers. We do not intentionally collect advertising identifiers, analytics profiles, contact lists, precise location data, or personal profile data through the app."],
+          ["4. On-Device Processing", "Foreground detection, object selection, preview rendering, and export rendering are intended to run locally on the user’s device. Photos stay on the device unless the user explicitly chooses to share the exported result."],
+          ["5. Photo Library Access", "The app requests photo access only when the user selects a photo or saves an exported result to Photos."],
+          ["6. Purchases", "One-time purchase processing, billing, and purchase restoration are provided by Apple. We do not receive the user’s full payment details."],
+          ["7. Sharing", "We do not sell personal information. We do not share photos with third parties on our own. Content is shared only when the user chooses to save to Photos or uses the iOS share sheet."],
+          ["8. Retention", "Selected images, previews, and temporary export files remain on the device unless the user deletes them or the system clears temporary files."],
+          ["9. Children’s Privacy", "This app does not require account registration and is not designed as a social service for children."],
+          ["10. Changes", "We may update this Privacy Policy when product behavior changes. The latest version will be posted on this page."]
+        ],
+        contactTitle: "11. Contact",
+        contactBody: `For privacy or support questions, contact <a href="mailto:${supportEmail}">${supportEmail}</a>.`
+      },
+      "zh-Hans": {
+        lang: "简体中文",
+        pill: "隐私政策",
+        title: "隐私政策",
+        effectiveDate: "生效日期：2026 年 3 月 15 日",
+        intro: "本隐私政策适用于呀哈哈科技开发的 Cutout Magic / 抠图神器。版权 © 2026 Yahaha Tech, Rodan。",
+        sections: [
+          ["1. 概述", "抠图神器是一款以本地处理为主的抠图工具。用户可以选择图片、在设备端识别前景物体、预览编辑结果，并通过一次性买断解锁导出功能。"],
+          ["2. 我们处理的数据", "App 只处理用户主动选择的图片。用户选择导出时，App 会在本地渲染保存或分享所需的文件。购买与恢复购买信息由 Apple StoreKit 处理。"],
+          ["3. 我们不收集的数据", "我们不会为本 App 建立用户账号体系。我们不会把用户选择的照片上传到自有服务器。我们不会主动收集广告标识、分析画像、通讯录、精确位置或个人档案信息。"],
+          ["4. 本地处理", "前景识别、物体选择、预览渲染和导出渲染都以设备本地处理为主。除非用户主动分享结果，否则照片不会离开设备。"],
+          ["5. 照片权限", "只有在用户选择导入照片或保存导出结果到相册时，App 才会请求照片访问权限。"],
+          ["6. 购买", "一次性付费、计费和恢复购买由 Apple 提供。我们不会直接获得用户完整的支付信息。"],
+          ["7. 分享", "我们不会出售个人信息，也不会主动将照片分享给第三方。内容只有在用户主动保存到相册或使用系统分享时才会被输出。"],
+          ["8. 保留", "所选图片、预览结果和临时导出文件会保留在用户设备上，直到用户删除或系统清理临时文件。"],
+          ["9. 儿童隐私", "本 App 不要求注册账号，也不是面向儿童的社交服务。"],
+          ["10. 变更", "当产品行为发生变化时，我们可能更新本隐私政策。最新版本会发布在此页面。"]
+        ],
+        contactTitle: "11. 联系方式",
+        contactBody: `如有隐私或支持相关问题，请联系 <a href="mailto:${supportEmail}">${supportEmail}</a>。`
+      },
+      "zh-Hant": {
+        lang: "繁體中文",
+        pill: "隱私政策",
+        title: "隱私政策",
+        effectiveDate: "生效日期：2026 年 3 月 15 日",
+        intro: "本隱私政策適用於呀哈哈科技開發的 Cutout Magic / 摳圖神器。版權 © 2026 Yahaha Tech, Rodan。",
+        sections: [
+          ["1. 概述", "摳圖神器是一款以本地處理為主的摳圖工具。用戶可以選擇圖片、在裝置端識別前景物體、預覽編輯結果，並透過一次性買斷解鎖導出功能。"],
+          ["2. 我們處理的資料", "App 只處理用戶主動選擇的圖片。用戶選擇導出時，App 會在本地渲染保存或分享所需的檔案。購買與恢復購買資訊由 Apple StoreKit 處理。"],
+          ["3. 我們不收集的資料", "我們不會為本 App 建立用戶帳號體系。我們不會把用戶選擇的照片上傳到自有伺服器。我們不會主動收集廣告識別碼、分析畫像、通訊錄、精確位置或個人檔案資訊。"],
+          ["4. 本地處理", "前景識別、物體選擇、預覽渲染和導出渲染都以裝置本地處理為主。除非用戶主動分享結果，否則照片不會離開裝置。"],
+          ["5. 照片權限", "只有在用戶選擇匯入照片或保存導出結果到相簿時，App 才會要求照片存取權限。"],
+          ["6. 購買", "一次性付費、計費和恢復購買由 Apple 提供。我們不會直接取得用戶完整的付款資訊。"],
+          ["7. 分享", "我們不會出售個人資訊，也不會主動將照片分享給第三方。內容只有在用戶主動保存到相簿或使用系統分享時才會輸出。"],
+          ["8. 保留", "所選圖片、預覽結果和暫時導出檔案會保留在用戶裝置上，直到用戶刪除或系統清理暫存檔。"],
+          ["9. 兒童隱私", "本 App 不要求註冊帳號，也不是面向兒童的社交服務。"],
+          ["10. 變更", "當產品行為發生變化時，我們可能更新本隱私政策。最新版本會發佈在此頁面。"]
+        ],
+        contactTitle: "11. 聯絡方式",
+        contactBody: `如有隱私或支援相關問題，請聯絡 <a href="mailto:${supportEmail}">${supportEmail}</a>。`
+      },
+      ja: {
+        lang: "日本語",
+        pill: "プライバシーポリシー",
+        title: "プライバシーポリシー",
+        effectiveDate: "発効日: 2026年3月15日",
+        intro: "本プライバシーポリシーは、Yahaha Tech が提供する Cutout Magic / 抠图神器 に適用されます。Copyright © 2026 Yahaha Tech, Rodan.",
+        sections: [
+          ["1. 概要", "Cutout Magic は端末内処理を中心とした切り抜きツールです。ユーザーは画像を選択し、前景オブジェクトを端末上で検出し、編集をプレビューし、買い切りで書き出し機能を解放できます。"],
+          ["2. 処理するデータ", "アプリが処理するのは、ユーザーが明示的に選択した画像のみです。書き出し時には、保存または共有のためのファイルを端末内で生成します。購入と復元の情報は Apple StoreKit により処理されます。"],
+          ["3. 収集しないデータ", "このアプリではユーザーアカウントを作成しません。選択した写真を当社サーバーへアップロードしません。広告識別子、分析プロファイル、連絡先、正確な位置情報、個人プロフィール情報を意図的に収集しません。"],
+          ["4. 端末内処理", "前景検出、対象選択、プレビュー、書き出しは端末内で行う設計です。ユーザーが明示的に共有しない限り、写真は端末外へ送信されません。"],
+          ["5. 写真アクセス", "写真の選択または書き出し結果を写真アプリへ保存する場合にのみ、写真アクセスを要求します。"],
+          ["6. 購入", "買い切り購入、課金、購入復元は Apple が提供します。当社が完全な支払い情報を直接取得することはありません。"],
+          ["7. 共有", "個人情報を販売することはありません。当社の判断で写真を第三者へ共有することもありません。内容が外部へ出るのは、ユーザーが写真へ保存するか、iOS の共有シートを利用した場合のみです。"],
+          ["8. 保持", "選択した画像、プレビュー、書き出し用の一時ファイルは、ユーザーが削除するかシステムが一時領域を掃除するまで端末内に残ります。"],
+          ["9. 子どものプライバシー", "本アプリはアカウント登録を必要とせず、子ども向けソーシャルサービスとして設計されていません。"],
+          ["10. 変更", "製品の挙動が変わる場合、本ポリシーを更新することがあります。最新版はこのページで公開します。"]
+        ],
+        contactTitle: "11. お問い合わせ",
+        contactBody: `プライバシーまたはサポートに関するご質問は <a href="mailto:${supportEmail}">${supportEmail}</a> までご連絡ください。`
+      },
+      ko: {
+        lang: "한국어",
+        pill: "개인정보 처리방침",
+        title: "개인정보 처리방침",
+        effectiveDate: "시행일: 2026년 3월 15일",
+        intro: "이 개인정보 처리방침은 Yahaha Tech가 제공하는 Cutout Magic / 抠图神器 에 적용됩니다. Copyright © 2026 Yahaha Tech, Rodan.",
+        sections: [
+          ["1. 개요", "Cutout Magic은 기기 내 처리 중심의 컷아웃 도구입니다. 사용자는 이미지를 선택하고, 전경 객체를 기기에서 감지하고, 편집 결과를 미리 보고, 일회성 구매로 내보내기 기능을 해제할 수 있습니다."],
+          ["2. 처리하는 데이터", "앱은 사용자가 명시적으로 선택한 이미지에 한해 처리합니다. 내보내기 시 저장 또는 공유용 파일을 기기에서 생성합니다. 구매 및 복원 정보는 Apple StoreKit을 통해 처리됩니다."],
+          ["3. 수집하지 않는 데이터", "이 앱은 사용자 계정을 만들지 않습니다. 선택한 사진을 당사 서버로 업로드하지 않습니다. 광고 식별자, 분석 프로필, 연락처, 정확한 위치 정보, 개인 프로필 정보를 의도적으로 수집하지 않습니다."],
+          ["4. 기기 내 처리", "전경 감지, 대상 선택, 미리보기 렌더링, 내보내기 렌더링은 기기에서 수행되도록 설계되었습니다. 사용자가 명시적으로 공유하지 않는 한 사진은 기기를 벗어나지 않습니다."],
+          ["5. 사진 접근", "사진 선택 또는 결과를 사진 앱에 저장할 때만 사진 접근 권한을 요청합니다."],
+          ["6. 구매", "일회성 구매, 결제, 구매 복원은 Apple이 제공합니다. 당사는 사용자의 전체 결제 정보를 직접 받지 않습니다."],
+          ["7. 공유", "당사는 개인 정보를 판매하지 않습니다. 당사 판단으로 사진을 제3자와 공유하지도 않습니다. 사용자가 사진에 저장하거나 iOS 공유 시트를 사용할 때만 외부로 전달됩니다."],
+          ["8. 보관", "선택한 이미지, 미리보기, 임시 내보내기 파일은 사용자가 삭제하거나 시스템이 임시 파일을 정리할 때까지 기기에 남습니다."],
+          ["9. 아동 개인정보", "이 앱은 계정 가입을 요구하지 않으며, 아동 대상 소셜 서비스로 설계되지 않았습니다."],
+          ["10. 변경", "제품 동작이 바뀌면 본 방침을 업데이트할 수 있습니다. 최신 버전은 이 페이지에 게시됩니다."]
+        ],
+        contactTitle: "11. 문의",
+        contactBody: `개인정보 또는 지원 관련 문의는 <a href="mailto:${supportEmail}">${supportEmail}</a> 로 연락해 주세요.`
+      },
+      es: {
+        lang: "Español",
+        pill: "Política de Privacidad",
+        title: "Política de Privacidad",
+        effectiveDate: "Fecha de entrada en vigor: 15 de marzo de 2026",
+        intro: "Esta Política de Privacidad se aplica a Cutout Magic (también distribuida con el nombre chino 抠图神器), desarrollada por Yahaha Tech. Copyright © 2026 Yahaha Tech, Rodan.",
+        sections: [
+          ["1. Descripción general", "Cutout Magic es una herramienta de recorte basada principalmente en procesamiento local. La app permite seleccionar una imagen, detectar objetos en primer plano en el dispositivo, previsualizar la edición y desbloquear la exportación mediante un pago único."],
+          ["2. Datos que procesamos", "La app procesa solo las imágenes que la persona usuaria selecciona de forma explícita. Si la persona decide exportar, la app genera localmente el archivo que se va a guardar o compartir. La compra y la restauración se gestionan mediante Apple StoreKit."],
+          ["3. Datos que no recopilamos", "No creamos cuentas de usuario para esta app. No subimos las fotos seleccionadas a nuestros propios servidores. No recopilamos de forma intencionada identificadores publicitarios, perfiles analíticos, contactos, ubicación precisa ni datos de perfil personal."],
+          ["4. Procesamiento en el dispositivo", "La detección del primer plano, la selección de objetos, la vista previa y la renderización para exportar están diseñadas para ejecutarse localmente en el dispositivo. Las fotos no salen del dispositivo salvo que la persona usuaria decida compartir el resultado."],
+          ["5. Acceso a Fotos", "La app solicita acceso a Fotos únicamente cuando la persona usuaria elige una imagen o guarda el resultado exportado en Fotos."],
+          ["6. Compras", "La compra única, la facturación y la restauración de compras son proporcionadas por Apple. No recibimos directamente los datos completos de pago de la persona usuaria."],
+          ["7. Uso compartido", "No vendemos información personal. No compartimos fotos con terceros por iniciativa propia. El contenido solo sale del dispositivo cuando la persona usuaria lo guarda en Fotos o usa la hoja de compartir de iOS."],
+          ["8. Conservación", "Las imágenes seleccionadas, las vistas previas y los archivos temporales de exportación permanecen en el dispositivo hasta que la persona usuaria los elimine o el sistema borre los archivos temporales."],
+          ["9. Privacidad infantil", "Esta app no requiere registro de cuentas y no está diseñada como servicio social para menores."],
+          ["10. Cambios", "Podemos actualizar esta Política de Privacidad si cambia el comportamiento del producto. La versión más reciente se publicará en esta página."]
+        ],
+        contactTitle: "11. Contacto",
+        contactBody: `Para preguntas sobre privacidad o soporte, escribe a <a href="mailto:${supportEmail}">${supportEmail}</a>.`
+      }
+    };
+
+    const langSelect = document.getElementById("lang");
+    const supported = Object.keys(translations);
+    const browserLang = navigator.language.startsWith("zh-CN") ? "zh-Hans"
+      : navigator.language.startsWith("zh-TW") || navigator.language.startsWith("zh-HK") ? "zh-Hant"
+      : supported.find((key) => navigator.language.startsWith(key)) || "en";
+
+    supported.forEach((key) => {
+      const option = document.createElement("option");
+      option.value = key;
+      option.textContent = translations[key].lang;
+      langSelect.appendChild(option);
+    });
+
+    function render(lang) {
+      const t = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.title = `${t.title} - Cutout Magic`;
+      document.getElementById("policy-pill").textContent = t.pill;
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("effective-date").textContent = t.effectiveDate;
+      document.getElementById("intro").textContent = t.intro;
+      document.getElementById("contact-title").textContent = t.contactTitle;
+      document.getElementById("contact-body").innerHTML = t.contactBody;
+
+      const sections = document.getElementById("sections");
+      sections.innerHTML = "";
+      t.sections.forEach(([title, body]) => {
+        const h2 = document.createElement("h2");
+        h2.textContent = title;
+        const p = document.createElement("p");
+        p.textContent = body;
+        sections.appendChild(h2);
+        sections.appendChild(p);
+      });
+    }
+
+    langSelect.value = browserLang;
+    render(browserLang);
+    langSelect.addEventListener("change", (event) => render(event.target.value));
+  </script>
+</body>
+</html>

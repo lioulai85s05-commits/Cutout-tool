@@ -1,0 +1,41 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="48" fill="#FAF6F0"/>
+  <text x="80" y="120" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="54" font-weight="700">UI Option C · Gallery Utility</text>
+  <text x="80" y="168" fill="#6B6159" font-family="Helvetica, Arial, sans-serif" font-size="24">Brighter, more guided, easier for casual users to understand quickly.</text>
+
+  <rect x="84" y="230" width="420" height="680" rx="54" fill="#FFFFFF" stroke="#E3D8CC" stroke-width="4"/>
+  <rect x="116" y="266" width="356" height="180" rx="30" fill="#FFF1E6"/>
+  <text x="142" y="324" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="700">Cut Out Any Object</text>
+  <text x="142" y="372" fill="#6B6159" font-family="Helvetica, Arial, sans-serif" font-size="22">Upload one image, choose a detected object,</text>
+  <text x="142" y="402" fill="#6B6159" font-family="Helvetica, Arial, sans-serif" font-size="22">then save as PNG or JPG.</text>
+  <rect x="142" y="612" width="330" height="82" rx="28" fill="#FF7A59"/>
+  <text x="210" y="662" fill="white" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="700">Choose Photo</text>
+  <rect x="116" y="720" width="110" height="110" rx="24" fill="#FFF5EE"/>
+  <rect x="238" y="720" width="110" height="110" rx="24" fill="#FFF5EE"/>
+  <rect x="360" y="720" width="110" height="110" rx="24" fill="#FFF5EE"/>
+
+  <rect x="592" y="230" width="420" height="680" rx="54" fill="#FFFFFF" stroke="#E3D8CC" stroke-width="4"/>
+  <rect x="620" y="276" width="364" height="446" rx="34" fill="#ECF4FB"/>
+  <ellipse cx="804" cy="488" rx="128" ry="178" fill="#FDE8DF"/>
+  <path d="M698 420C720 362 812 332 902 390" stroke="#FF7A59" stroke-width="8" stroke-linecap="round"/>
+  <path d="M640 552C674 634 758 682 830 688" stroke="#6CD67E" stroke-width="8" stroke-linecap="round"/>
+  <path d="M920 470C894 430 852 408 814 404" stroke="#44B9F0" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="700" cy="414" r="20" fill="#FF7A59"/>
+  <circle cx="648" cy="548" r="20" fill="#6CD67E"/>
+  <circle cx="922" cy="466" r="20" fill="#44B9F0"/>
+  <text x="692" y="421" fill="white" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">1</text>
+  <text x="640" y="555" fill="white" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">2</text>
+  <text x="914" y="473" fill="white" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">3</text>
+  <rect x="620" y="750" width="364" height="108" rx="28" fill="#FFF6EF"/>
+  <text x="654" y="802" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700">Tap a numbered object to continue</text>
+
+  <rect x="1100" y="230" width="420" height="680" rx="54" fill="#FFFFFF" stroke="#E3D8CC" stroke-width="4"/>
+  <rect x="1132" y="276" width="356" height="430" rx="34" fill="#0F1115"/>
+  <rect x="1132" y="736" width="170" height="56" rx="22" fill="#FFF5EE"/>
+  <rect x="1318" y="736" width="170" height="56" rx="22" fill="#FFF5EE"/>
+  <rect x="1132" y="818" width="356" height="52" rx="24" fill="#FF7A59"/>
+  <circle cx="1310" cy="488" r="146" fill="#FFF5EE"/>
+  <text x="1186" y="771" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700">PNG</text>
+  <text x="1372" y="771" fill="#171412" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700">JPG</text>
+  <text x="1232" y="851" fill="white" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Save Result</text>
+</svg>

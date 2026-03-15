@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cutout Magic / 抠图神器</title>
+  <style>
+    :root {
+      --bg: #f7efe6;
+      --surface: rgba(252, 246, 239, 0.96);
+      --surface-strong: #fff9f3;
+      --text: #171417;
+      --muted: #5f5852;
+      --accent: #ff6d4f;
+      --accent-soft: #ffe2d8;
+      --border: #e7d6c7;
+      --dark: #1d191d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #fff8ef 0%, var(--bg) 52%);
+      color: var(--text);
+      font: 16px/1.7 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 36px 20px 80px; }
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .brand { font-weight: 800; }
+    .hero, .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: 0 18px 60px rgba(25, 18, 16, 0.08);
+    }
+    .hero { padding: 32px; margin-bottom: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+    .card { padding: 24px; }
+    .dark {
+      background: linear-gradient(135deg, #231f26, var(--dark));
+      color: white;
+    }
+    .dark p, .dark li, .dark a { color: rgba(255,255,255,0.84); }
+    h1, h2 { margin: 0 0 12px; line-height: 1.1; }
+    h1 { font-size: 40px; }
+    h2 { font-size: 24px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    select {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+      border-radius: 14px;
+      padding: 10px 14px;
+      font: inherit;
+    }
+    .pill {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #a44530;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ff7a5f, var(--accent));
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .footer {
+      margin-top: 26px;
+      color: #8c8178;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="toolbar">
+      <div class="brand">Cutout Magic / 抠图神器</div>
+      <select id="lang"></select>
+    </div>
+
+    <section class="hero">
+      <div class="pill" id="hero-pill"></div>
+      <h1 id="title"></h1>
+      <p id="subtitle"></p>
+      <p id="summary"></p>
+    </section>
+
+    <section class="grid">
+      <article class="card dark">
+        <h2 id="privacy-title"></h2>
+        <p id="privacy-body"></p>
+        <a class="button" href="./privacy.html" id="privacy-cta"></a>
+      </article>
+
+      <article class="card">
+        <h2 id="support-title"></h2>
+        <p id="support-body"></p>
+        <a class="button" href="./support.html" id="support-cta"></a>
+      </article>
+    </section>
+
+    <p class="footer" id="footer"></p>
+  </main>
+
+  <script>
+    const translations = {
+      en: {
+        lang: "English",
+        heroPill: "Official Pages",
+        title: "Cutout Magic Support Center",
+        subtitle: "App Store support, privacy, and release documents for the current iPhone build.",
+        summary: "Use these pages as your Support URL and Privacy Policy URL in App Store Connect, or publish them directly with GitHub Pages.",
+        privacyTitle: "Privacy Policy",
+        privacyBody: "Read how selected photos are processed on-device, what purchase data is handled by Apple, and what information the developer does not collect.",
+        privacyCTA: "Open Privacy Policy",
+        supportTitle: "Technical Support",
+        supportBody: "Find purchase, restore, export, and troubleshooting guidance for the current release of Cutout Magic / 抠图神器.",
+        supportCTA: "Open Support Page",
+        footer: "Copyright © 2026 Yahaha Tech, Rodan"
+      },
+      "zh-Hans": {
+        lang: "简体中文",
+        heroPill: "官方页面",
+        title: "抠图神器支持中心",
+        subtitle: "用于当前 iPhone 构建版本的 App Store 支持、隐私与上架文档。",
+        summary: "这些页面可以直接作为 App Store Connect 中的支持 URL 和隐私政策 URL，也可以直接发布到 GitHub Pages。",
+        privacyTitle: "隐私政策",
+        privacyBody: "查看用户所选照片如何在本地处理、购买数据如何由 Apple 处理，以及开发者不会收集哪些信息。",
+        privacyCTA: "打开隐私政策",
+        supportTitle: "技术支持",
+        supportBody: "查看抠图神器当前版本的购买、恢复购买、导出与排查说明。",
+        supportCTA: "打开支持页面",
+        footer: "Copyright © 2026 Yahaha Tech, Rodan"
+      },
+      "zh-Hant": {
+        lang: "繁體中文",
+        heroPill: "官方頁面",
+        title: "摳圖神器支援中心",
+        subtitle: "用於目前 iPhone 建置版本的 App Store 支援、隱私與上架文件。",
+        summary: "這些頁面可直接作為 App Store Connect 中的支援 URL 與隱私政策 URL，也可直接發佈到 GitHub Pages。",
+        privacyTitle: "隱私政策",
+        privacyBody: "查看用戶所選照片如何在本地處理、購買資料如何由 Apple 處理，以及開發者不會收集哪些資訊。",
+        privacyCTA: "開啟隱私政策",
+        supportTitle: "技術支援",
+        supportBody: "查看摳圖神器目前版本的購買、恢復購買、導出與排查說明。",
+        supportCTA: "開啟支援頁面",
+        footer: "Copyright © 2026 Yahaha Tech, Rodan"
+      },
+      ja: {
+        lang: "日本語",
+        heroPill: "公式ページ",
+        title: "Cutout Magic サポートセンター",
+        subtitle: "現在の iPhone ビルド向け App Store サポート、プライバシー、公開用ドキュメントです。",
+        summary: "これらのページは App Store Connect の Support URL と Privacy Policy URL にそのまま使えます。GitHub Pages でそのまま公開することもできます。",
+        privacyTitle: "プライバシーポリシー",
+        privacyBody: "選択した写真の端末内処理、購入データの Apple による処理、開発者が収集しない情報を確認できます。",
+        privacyCTA: "プライバシーポリシーを開く",
+        supportTitle: "技術サポート",
+        supportBody: "Cutout Magic / 抠图神器 の現在のリリース向けに、購入、復元、書き出し、トラブル対応を案内します。",
+        supportCTA: "サポートページを開く",
+        footer: "Copyright © 2026 Yahaha Tech, Rodan"
+      },
+      ko: {
+        lang: "한국어",
+        heroPill: "공식 페이지",
+        title: "Cutout Magic 지원 센터",
+        subtitle: "현재 iPhone 빌드용 App Store 지원, 개인정보, 출시 문서입니다.",
+        summary: "이 페이지들은 App Store Connect의 Support URL과 Privacy Policy URL로 바로 사용할 수 있으며 GitHub Pages에도 바로 배포할 수 있습니다.",
+        privacyTitle: "개인정보 처리방침",
+        privacyBody: "선택한 사진이 기기 내에서 어떻게 처리되는지, 구매 데이터가 Apple에 의해 어떻게 처리되는지, 개발자가 수집하지 않는 정보가 무엇인지 확인하세요.",
+        privacyCTA: "개인정보 페이지 열기",
+        supportTitle: "기술 지원",
+        supportBody: "현재 Cutout Magic / 抠图神器 릴리스용 구매, 복원, 내보내기, 문제 해결 가이드를 제공합니다.",
+        supportCTA: "지원 페이지 열기",
+        footer: "Copyright © 2026 Yahaha Tech, Rodan"
+      },
+      es: {
+        lang: "Español",
+        heroPill: "Páginas oficiales",
+        title: "Centro de soporte de Cutout Magic",
+        subtitle: "Soporte de App Store, privacidad y documentos de lanzamiento para la compilación actual de iPhone.",
+        summary: "Estas páginas pueden usarse directamente como Support URL y Privacy Policy URL en App Store Connect, o publicarse tal cual con GitHub Pages.",
+        privacyTitle: "Política de Privacidad",
+        privacyBody: "Consulta cómo se procesan localmente las fotos seleccionadas, cómo Apple gestiona los datos de compra y qué información no recopila el desarrollador.",
+        privacyCTA: "Abrir política de privacidad",
+        supportTitle: "Soporte técnico",
+        supportBody: "Encuentra ayuda sobre compras, restauración, exportación y solución de problemas para la versión actual de Cutout Magic / 抠图神器.",
+        supportCTA: "Abrir soporte",
+        footer: "Copyright © 2026 Yahaha Tech, Rodan"
+      }
+    };
+
+    const langSelect = document.getElementById("lang");
+    const supported = Object.keys(translations);
+    const browserLang = navigator.language.startsWith("zh-CN") ? "zh-Hans"
+      : navigator.language.startsWith("zh-TW") || navigator.language.startsWith("zh-HK") ? "zh-Hant"
+      : supported.find((key) => navigator.language.startsWith(key)) || "en";
+
+    supported.forEach((key) => {
+      const option = document.createElement("option");
+      option.value = key;
+      option.textContent = translations[key].lang;
+      langSelect.appendChild(option);
+    });
+
+    function render(lang) {
+      const t = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.title = t.title;
+      document.getElementById("hero-pill").textContent = t.heroPill;
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("subtitle").textContent = t.subtitle;
+      document.getElementById("summary").textContent = t.summary;
+      document.getElementById("privacy-title").textContent = t.privacyTitle;
+      document.getElementById("privacy-body").textContent = t.privacyBody;
+      document.getElementById("privacy-cta").textContent = t.privacyCTA;
+      document.getElementById("support-title").textContent = t.supportTitle;
+      document.getElementById("support-body").textContent = t.supportBody;
+      document.getElementById("support-cta").textContent = t.supportCTA;
+      document.getElementById("footer").textContent = t.footer;
+    }
+
+    langSelect.value = browserLang;
+    render(browserLang);
+    langSelect.addEventListener("change", (event) => render(event.target.value));
+  </script>
+</body>
+</html>
